@@ -2,7 +2,8 @@
 <html>
   <head>
     <p style="text-align: center;"><strong>The Legion</strong></p>
-     <h1><p style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Anonymous_Idea.jpg/601px-Anonymous_Idea.jpg" alt="Logo "align="center" width="500" height="500"></p> <h1> 
+     <h1><p style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Anonymous_Idea.jpg/601px-Anonymous_Idea.jpg" alt="Logo "align="center" width="500" height="500"></p> <h1>
+     <link rel="stylesheet" type="text/css" href="style.css">
       <head>
        <h2><p style="text-align: center;"><a href="https://TheLegion.net//Arcade" target="_blank" rel="external" hreflang="en" type="text/html">My Arcade</a></p><h2>
       <h2><p style="text-align: center;"><a href="https://TheLegion.net//Proxies" target="_blank" rel="external" hreflang="en" type="text/html">Proxies</a></p><h2>
