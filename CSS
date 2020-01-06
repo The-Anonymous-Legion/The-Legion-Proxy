@@ -1,0 +1,18 @@
+#demo {
+background: #D0E4F5 url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Anonymous_Idea.jpg/601px-Anonymous_Idea.jpg") no-repeat local 50% 50%;
+}
+#demo {
+ padding: 125px 100px; 
+}
+#demoFont {
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 16px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
