@@ -1,29 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-<p style="text-align: center;"><strong>The Legion</strong></p>
-     <h1><p style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Anonymous_Idea.jpg/601px-Anonymous_Idea.jpg" alt="Logo "align="center" width="500" height="500"></p> <h1> 
-      <head>
+<style> 
+body {
+ background-color: #517499; 
+}
+} 
+body {
+ color: white;
+text-shadow:5px 5px 5px #65c992;
+} 
+Font {
+ color: white;
+text-shadow:5px 5px 5px #65c992;
+} 
+a {
+ color: white;
+text-shadow:5px 5px 5px #65c992;
+} 
 
-<head>
-<style type="text/css">
-.menutitle{ cursor:pointer; margin-bottom: 5px; background-color:#ECECFF; color:#000000; width:140px;
+p {
+ color: white;
+ text-shadow:5px 5px 5px #65c992;
+} 
+div {
+ color: white;
+ text-shadow:5px 5px 5px #65c992;
+} 
+
+</style>
+  <head>
+      <link rel="stylesheet" type="text/css" href="https://self-subdued-relief.000webhostapp.com/CSS/Font.css">
+      <div id="Font"><strong><p style="text-align: center;">The Legion</strong></p></div>
+     <h1><p style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Anonymous_Idea.jpg/601px-Anonymous_Idea.jpg" alt="Logo "align="center" width="500" height="500"></p> <h1> 
+     <head>
+        <style type="text/css">
+.menutitle{
+cursor:pointer;
+margin-bottom: 5px;
+background-color:#ECECFF;
+color:#000000;
+width:140px;
 padding:2px;
-text-align:center; font-weight:bold;
-/*/*/border:1px solid #000000;/* */ }.submenu{
+text-align:center;
+font-weight:bold;
+/*/*/border:1px solid #000000;/* */
+}.submenu{
 margin-bottom: 0.5em;
 }
-</style><script type="text/javascript">/********************************************** *
+</style><script type="text/javascript">/***********************************************
 ***********************************************/var persistmenu="yes" //"yes" or "no". Make sure each SPAN content contains an incrementing ID starting at 1 (id="sub1", id="sub2", etc)
 var persisttype="sitewide" //enter "sitewide" for menu to persist across site, "local" for this page onlyif (document.getElementById){ //DynamicDrive.com change
-document.write('<style type="text/css">n') document.write('.submenu{display: none;}n') document.write('</style>n')
-}function SwitchMenu(obj){ if(document.getElementById){
-var el = document.getElementById(obj); var ar =
-
-document.getElementById("masterdiv").getElementsByTagName("span"); //DynamicDrive.com change
+document.write('<style type="text/css">n')
+document.write('.submenu{display: none;}n')
+document.write('</style>n')
+}function SwitchMenu(obj){
+if(document.getElementById){
+var el = document.getElementById(obj);
+var ar = document.getElementById("masterdiv").getElementsByTagName("span"); //DynamicDrive.com change
 if(el.style.display != "block"){ //DynamicDrive.com change
 for (var i=0; i<ar.length; i++){
-if (ar[i].className=="submenu") //DynamicDrive.com change ar[i].style.display = "none";
+if (ar[i].className=="submenu") //DynamicDrive.com change
+ar[i].style.display = "none";
 }
 el.style.display = "block";
 }else{
@@ -38,7 +75,8 @@ offset = document.cookie.indexOf(search)
 if (offset != -1) {
 offset += search.length
 end = document.cookie.indexOf(";", offset);
-if (end == -1) end = document.cookie.length; returnvalue=unescape(document.cookie.substring(offset, end))
+if (end == -1) end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
 }
 }
 return returnvalue;
@@ -46,32 +84,60 @@ return returnvalue;
 if (persistmenu=="yes"){
 var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
 var cookievalue=get_cookie(cookiename)
-if (cookievalue!="") document.getElementById(cookievalue).style.display="block"
+if (cookievalue!="")
+document.getElementById(cookievalue).style.display="block"
 }
 }function savemenustate(){
 var inc=1, blockid=""
 while (document.getElementById("sub"+inc)){
-if (document.getElementById("sub"+inc).style.display=="block"){ blockid="sub"+inc
+if (document.getElementById("sub"+inc).style.display=="block"){
+blockid="sub"+inc
 break
 }
 inc++
 }
 var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
-var cookievalue=(persisttype=="sitewide")? blockid+";path=/" : blockid document.cookie=cookiename+"="+cookievalue
+var cookievalue=(persisttype=="sitewide")? blockid+";path=/" : blockid
+document.cookie=cookiename+"="+cookievalue
 }if (window.addEventListener)
 window.addEventListener("load", onloadfunction, false)
 else if (window.attachEvent)
 window.attachEvent("onload", onloadfunction)
 else if (document.getElementById)
 window.onload=onloadfunctionif (persistmenu=="yes" && document.getElementById)
-window.onunload=savemenustate</script>
+window.onunload=savemenustate</script> 
      </head>
-<h2><p style="text-align: center;"><a href="file:///media/fuse/drivefs-8be72f5b4da8ffea436a49e1cfb4776e/root/Other/The%20Legion/Home.html" target="_blank" rel="external" hreflang="en" type="text/html">Home</a></p><h2>
-<p style="text-align: center;">My Arcade</p>
+     <head>
+         <!-- Keep all menus within masterdiv-->
+<div id="masterdiv"><div onclick="SwitchMenu('sub1')"></div>
+<span id="sub1">
+- <a href="https://self-subdued-relief.000webhostapp.com/">Home</a><br>
+- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Movies%20and%20TV.html">Movies and TV</a><br>
+- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Proxies.html">Proxies</a><br>
+- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Contributors.html">Contributors</a><br>
+- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Bookmarks">Bookmarks</a><br>
+- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Contacts.html">Contacts</a><br>
+- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Contacts.html">Updates</a><br>
+     </head>
+      <head>
+<p style="text-align: center;"><div id="Font"><p style="text-align: center;">My Arcade Collection #1</p></div>
    </head>
-   <h2><p style="text-align: center;"><a href="file:///media/fuse/drivefs-8be72f5b4da8ffea436a49e1cfb4776e/root/Other/The%20Legion/Run%203.html" target="_blank" rel="external" hreflang="en" type="text/html">Run 3</a></p><h2>
-      <h2><p style="text-align: center;"><a href="file:///media/fuse/drivefs-8be72f5b4da8ffea436a49e1cfb4776e/root/Other/The%20Legion/Super%20Meat%20Boy.html" target="_blank" rel="external" hreflang="en" type="text/html">Super Meat Boy</a></p><h2>
-        <h2><p style="text-align: center;"><a href="file:///media/fuse/drivefs-8be72f5b4da8ffea436a49e1cfb4776e/root/Other/The%20Legion/Emulator.html" target="_blank" rel="external" hreflang="en" type="text/html">Emulator</a></p><h2>
+   <head>
+<a href="https://self-subdued-relief.000webhostapp.com/Games/Run%203.html" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">Run 3</p></div></a>
+<a href="https://self-subdued-relief.000webhostapp.com/Games/Super%20Meat%20Boy.html" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">Super Meat Boy<p/></div></a>
+<a href="https://self-subdued-relief.000webhostapp.com/Games/Awesome%20Cars.html" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">Awesome Cars</p></div></a></p>
+<a href="https://self-subdued-relief.000webhostapp.com/Games/Doom.html" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">Doom</p></div></a>
+<a href="https://self-subdued-relief.000webhostapp.com/Games/Wolfenstein-3D.html" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">Wolfenstein 3D</p></div></a>
+<a href="https://self-subdued-relief.000webhostapp.com/Games/Duke-Nukem-3D.html" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">Duke Nukem 3D</p></div></a>
+<a href="https://self-subdued-relief.000webhostapp.com/Games/Doom%202.html" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">Doom 2</p></div></a>
+<a href="https://self-subdued-relief.000webhostapp.com/Games/Emulator.html" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">Emulator</p></div></a>
+<a href="https://self-subdued-relief.000webhostapp.com/Games/Stick%20RPG.html" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">Stick RPG</p></div></a>
+<a href="https://self-subdued-relief.000webhostapp.com/Games/Crush%20the%20Castle.html" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">Crush the Castle</p></div></a>
+<a href="https://self-subdued-relief.000webhostapp.com/Games/Stunts.html" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">Stunts</p></div></a>
+<a href="https://self-subdued-relief.000webhostapp.com/Games/Mirror%20Edge%202D.html" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">Mirror Edge 2D</p></div></a>
+<a href="https://self-subdued-relief.000webhostapp.com/Games/Portal2D.html" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">Portal 2D</p></div></a>
+<a href="https://self-subdued-relief.000webhostapp.com/Games/ShellShock.html" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">ShellShock</p></div></a>
+    </head>
    <body>
   </body>
  </html>
