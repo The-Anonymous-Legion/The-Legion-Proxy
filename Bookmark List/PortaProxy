@@ -1,0 +1,82 @@
+<html>
+<style>
+body {
+	background-color: #517499;
+}
+
+body {
+	text-shadow: 5px 5px 5px #65c992;
+}
+p {
+	text-shadow: 5px 5px 5px #65c992;
+		color: white;
+}
+h1 {
+	color: white;
+	text-shadow: 5px 5px 5px #65c992;
+}
+#title {
+	color: white;
+}
+
+
+}
+.Link {
+	color: white;
+}
+a:link {
+	color: #ffffff;
+}
+a:visited {
+	color: #ffffff;
+}
+a:hover {
+	color: #b89e9c;
+}
+a:active {
+	color: #699475;
+}
+</style>
+<head>
+<link rel="stylesheet" type="text/css" href="https://self-subdued-relief.000webhostapp.com/CSS/Font.css id="Font">
+<div id="Font">
+			<p id="title" style="text-align: center;"><strong>The Legion</strong></p>
+		</div>
+		<h1><p style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Anonymous_Idea.jpg/601px-Anonymous_Idea.jpg" alt="Logo "align="center" width="500" height="500"></p> <h1>
+</head>
+<head>
+<h1 style="text-align: center;">Porta Proxy</h1>
+<h1>Allows you to access a given site within other tabs; bypasses Hapara
+
+Setup: Create a bookmark, copy the provided code and paste it in as the URL (name it whatever you want).</h1>
+
+
+<p>javascript:((function(){
+var a,b,c;c="https://self-subdued-relief.000webhostapp.com/",
+b=document.createElement("iframe"),
+b.setAttribute("src",c),b.setAttribute("id","rusic-modal"),
+b.setAttribute("style","position: fixed; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; z-index: 99999999999; background-color: #fff;"),
+a=document.getElementsByTagName("body")[0],
+a.appendChild(b)})).call(this)</p>
+
+
+<p>To close the Porta Proxy, create another bookmark with this code:
+
+
+javascript: var element = document.getElementById("rusic-modal"); element.parentNode.removeChild(element);</p>
+
+
+
+<h1>If the site is blocked, or you want to use a different website, replace the link in line 2 with your own</h1>
+
+<p>If a link you put in doesn't work:
+<br>-  Most "complex" websites don't work with this</br>
+<br>-  Check if any quotations or other symbols were added or removed</br>
+<br>-  Check if the website given is valid and not blocked</br>
+<br>-  Check if the website you're on blocks scripts by trying it on another</br></p>
+</head>
+<body>
+</body>
+<body>
+</body>
+</html>
