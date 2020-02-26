@@ -41,7 +41,11 @@ a:active {
 	color: #699475;
 }
 </style>
+<title>
+The Legion
+</title>
 <head>
+	<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png">
 <link rel="stylesheet" type="text/css" href="https://self-subdued-relief.000webhostapp.com/CSS/Font.css id="Font">
 <div id="Font">
 			<p id="title" style="text-align: center;"><strong>The Legion</strong></p>
@@ -54,12 +58,12 @@ a:active {
 <p>
 This is the first version of our website. We are embarking on a journey. We start this Journey from one idea. This is that we will make school fun for everyone, so enjoy what we created. More things will come.
 </p>
-<h1>
+<h1><div id="Font">
 Update details
-</h1>
-<p>
+</div></h1>
+<p><div id="Font">
 First operational version of the site.
-</p>
+</div></p>
 </head>
 <head>
 </head>
