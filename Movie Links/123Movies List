@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<title>
+The Legion
+</title>
 <style> 
 body {
  background-color: #517499; 
@@ -14,6 +17,7 @@ text-shadow:5px 5px 5px #65c992;
 } 
 </style>
   <head>
+      	<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png">
       <link rel="stylesheet" type="text/css" href="file:///media/fuse/drivefs-8be72f5b4da8ffea436a49e1cfb4776e/root/Other/The%20Legion/CSS/Font.css">
       <div id="Font"><strong><p style="text-align: center;">The Legion</strong></p></div>
      <h1><p style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Anonymous_Idea.jpg/601px-Anonymous_Idea.jpg" alt="Logo "align="center" width="500" height="500"></p> <h1>
