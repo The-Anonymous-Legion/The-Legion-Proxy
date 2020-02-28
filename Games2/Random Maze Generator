@@ -1,0 +1,234 @@
+<html>
+<style>
+body{
+  margin: 0;
+  background: #222a33;
+  text-align: center;
+}
+div{
+  display: inline-block;
+  margin: 20px auto 0 auto;
+  position: relative;
+}
+ul{
+  position: absolute;
+  right: 0;
+  width: 220px;
+  height: 100%;
+  float: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  color: #eee;
+  font-family: helvetica;
+}
+li{
+  padding: 5px 5px 5px 5px;
+}
+label{
+  width: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: right;
+  padding-right: 5px;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+input{
+  width: 50%;
+  height: 24px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: #ccc;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 2px;
+  transition: background 200ms;
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+input:focus{
+  outline: none;
+  background: #fff;
+  color: #222;
+}
+input[type=button]{
+  background: #111;
+  color: #eee;
+  margin-left: 50%;
+  font-weight: normal;
+  cursor: pointer;
+}
+input[type=button]:active{
+  transform: translate(2px,2px);
+  box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
+}
+canvas{
+  margin-right: 220px;
+  display: block;
+  float: left;
+}
+</style>
+<head>
+<div>
+  <canvas></canvas>
+  <ul>
+    <li><label>Width:</label><input id=width type="text"/></li>
+    <li><label>Height:</label><input id=height type="text"/></li>
+    <li><label>Path Width:</label><input id=pathwidth type="text"/></li>
+    <li><label>Wall Width:</label><input id=wallwidth type="text"/></li>
+    <li><label>Outer Width:</label><input id=outerwidth type="text"/></li>
+    <li><label>Path Color:</label><input id=pathcolor type="text"/></li>
+    <li><label>Wall Color:</label><input id=wallcolor type="text"/></li>
+    <li><label>Seed:</label><input id=seed type="text"/></li>
+    <li><input id=randomseed type="button" value="Random Seed"/></li>
+  </ul>
+ <script>
+pathWidth = 10       //Width of the Maze Path
+wall = 2             //Width of the Walls between Paths
+outerWall = 2        //Width of the Outer most wall
+width = 25           //Number paths fitted horisontally
+height = 25          //Number paths fitted vertically
+delay = 1            //Delay between algorithm cycles
+x = width/2|0        //Horisontal starting position
+y = height/2|0       //Vertical starting position
+seed = Math.random()*100000|0//Seed for random numbers
+wallColor = '#d24'   //Color of the walls
+pathColor = '#222a33'//Color of the path
+
+randomGen = function(seed){
+	if(seed===undefined)var seed=performance.now()
+	return function(){
+    seed = (seed * 9301 + 49297) % 233280
+		return seed/233280
+	}
+}
+
+init = function(){
+  offset = pathWidth/2+outerWall
+  map = []
+  canvas = document.querySelector('canvas')
+  ctx = canvas.getContext('2d')
+  canvas.width = outerWall*2+width*(pathWidth+wall)-wall
+  canvas.height = outerWall*2+height*(pathWidth+wall)-wall
+  ctx.fillStyle = wallColor
+  ctx.fillRect(0,0,canvas.width,canvas.height)
+  random = randomGen(seed)
+  ctx.strokeStyle = pathColor
+  ctx.lineCap = 'square'
+  ctx.lineWidth = pathWidth
+  ctx.beginPath()
+  for(var i=0;i<height*2;i++){
+    map[i] = []
+    for(var j=0;j<width*2;j++){
+      map[i][j] = false
+    }
+  }
+  map[y*2][x*2] = true
+  route = [[x,y]]
+  ctx.moveTo(x*(pathWidth+wall)+offset,
+             y*(pathWidth+wall)+offset)
+}
+init()
+
+inputWidth = document.getElementById('width')
+inputHeight = document.getElementById('height')
+inputPathWidth = document.getElementById('pathwidth')
+inputWallWidth = document.getElementById('wallwidth')
+inputOuterWidth = document.getElementById('outerwidth')
+inputPathColor = document.getElementById('pathcolor')
+inputWallColor = document.getElementById('wallcolor')
+inputSeed = document.getElementById('seed')
+buttonRandomSeed = document.getElementById('randomseed')
+
+settings = {
+  display: function(){
+    inputWidth.value = width
+    inputHeight.value = height
+    inputPathWidth.value = pathWidth
+    inputWallWidth.value = wall
+    inputOuterWidth.value = outerWall
+    inputPathColor.value = pathColor
+    inputWallColor.value = wallColor
+    inputSeed.value = seed
+  },
+  check: function(){
+    if(inputWidth.value != width||
+       inputHeight.value != height||
+       inputPathWidth.value != pathWidth||
+       inputWallWidth.value != wall||
+       inputOuterWidth.value != outerWall||
+       inputPathColor.value != pathColor||
+       inputWallColor.value != wallColor||
+       inputSeed.value != seed){
+      settings.update()
+    }
+  },
+  update: function(){
+    clearTimeout(timer)
+    width = parseFloat(inputWidth.value)
+    height = parseFloat(inputHeight.value)
+    pathWidth = parseFloat(inputPathWidth.value)
+    wall = parseFloat(inputWallWidth.value)
+    outerWall = parseFloat(inputOuterWidth.value)
+    pathColor = inputPathColor.value
+    wallColor = inputWallColor.value
+    seed = parseFloat(inputSeed.value)
+    x = width/2|0
+    y = height/2|0
+    init()
+    loop()
+  }
+}
+
+buttonRandomSeed.addEventListener('click',function(){
+  inputSeed.value = Math.random()*100000|0
+})
+
+loop = function(){
+  x = route[route.length-1][0]|0
+  y = route[route.length-1][1]|0
+  
+  var directions = [[1,0],[-1,0],[0,1],[0,-1]],
+      alternatives = []
+  
+  for(var i=0;i<directions.length;i++){
+    if(map[(directions[i][1]+y)*2]!=undefined&&
+       map[(directions[i][1]+y)*2][(directions[i][0]+x)*2]===false){
+      alternatives.push(directions[i])
+    }
+  }
+  
+  if(alternatives.length===0){
+    route.pop()
+    if(route.length>0){
+      ctx.moveTo(route[route.length-1][0]*(pathWidth+wall)+offset,
+                 route[route.length-1][1]*(pathWidth+wall)+offset)
+      timer = setTimeout(loop,delay)
+    }
+    return;
+  }
+  direction = alternatives[random()*alternatives.length|0]
+  route.push([direction[0]+x,direction[1]+y])
+  ctx.lineTo((direction[0]+x)*(pathWidth+wall)+offset,
+             (direction[1]+y)*(pathWidth+wall)+offset)
+  map[(direction[1]+y)*2][(direction[0]+x)*2] = true
+  map[direction[1]+y*2][direction[0]+x*2] = true
+  ctx.stroke()
+  timer = setTimeout(loop,delay)
+}
+settings.display()
+loop()
+setInterval(settings.check,400)
+ </script>
+</div>
+</head>
+<head>
+</head>
+<body>
+</body>
+<body>
+</body>
+</html>
