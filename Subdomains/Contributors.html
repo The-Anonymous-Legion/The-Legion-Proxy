@@ -22,102 +22,78 @@ p {
 html{
 cursor:url("https://self-subdued-relief.000webhostapp.com/Images/Mouse%20Icon.ico"), default;
 }
+span {
+ color: white;
+ text-shadow:5px 5px 5px #65c992;
+} 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: White;
+  display: block;
+  transition: 0.3s
+  text-shadow:5px 5px 5px #65c992;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
 </style>
   <head>
       	<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Anonymous_emblem.svg/1200px-Anonymous_emblem.svg.png">
       <link rel="stylesheet" type="text/css" href="https://self-subdued-relief.000webhostapp.com/CSS/Font.css">
    <div id="Font"><p style="text-align: center;"><strong>The Legion</strong></p></div>
      <h1><p style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Anonymous_Idea.jpg/601px-Anonymous_Idea.jpg" alt="Logo "align="center" width="500" height="500"></p><h1>
-                 <style type="text/css">
-.menutitle{
-cursor:pointer;
-margin-bottom: 5px;
-background-color:#ECECFF;
-color:#000000;
-width:140px;
-padding:2px;
-text-align:center;
-font-weight:bold;
-/*/*/border:1px solid #000000;/* */
-}.submenu{
-margin-bottom: 0.5em;
-}
-</style><script type="text/javascript">/***********************************************
-***********************************************/var persistmenu="yes" //"yes" or "no". Make sure each SPAN content contains an incrementing ID starting at 1 (id="sub1", id="sub2", etc)
-var persisttype="sitewide" //enter "sitewide" for menu to persist across site, "local" for this page onlyif (document.getElementById){ //DynamicDrive.com change
-document.write('<style type="text/css">n')
-document.write('.submenu{display: none;}n')
-document.write('</style>n')
-}function SwitchMenu(obj){
-if(document.getElementById){
-var el = document.getElementById(obj);
-var ar = document.getElementById("masterdiv").getElementsByTagName("span"); //DynamicDrive.com change
-if(el.style.display != "block"){ //DynamicDrive.com change
-for (var i=0; i<ar.length; i++){
-if (ar[i].className=="submenu") //DynamicDrive.com change
-ar[i].style.display = "none";
-}
-el.style.display = "block";
-}else{
-el.style.display = "none";
-}
-}
-}function get_cookie(Name) {
-var search = Name + "="
-var returnvalue = "";
-if (document.cookie.length > 0) {
-offset = document.cookie.indexOf(search)
-if (offset != -1) {
-offset += search.length
-end = document.cookie.indexOf(";", offset);
-if (end == -1) end = document.cookie.length;
-returnvalue=unescape(document.cookie.substring(offset, end))
-}
-}
-return returnvalue;
-}function onloadfunction(){
-if (persistmenu=="yes"){
-var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
-var cookievalue=get_cookie(cookiename)
-if (cookievalue!="")
-document.getElementById(cookievalue).style.display="block"
-}
-}function savemenustate(){
-var inc=1, blockid=""
-while (document.getElementById("sub"+inc)){
-if (document.getElementById("sub"+inc).style.display=="block"){
-blockid="sub"+inc
-break
-}
-inc++
-}
-var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
-var cookievalue=(persisttype=="sitewide")? blockid+";path=/" : blockid
-document.cookie=cookiename+"="+cookievalue
-}if (window.addEventListener)
-window.addEventListener("load", onloadfunction, false)
-else if (window.attachEvent)
-window.attachEvent("onload", onloadfunction)
-else if (document.getElementById)
-window.onload=onloadfunctionif (persistmenu=="yes" && document.getElementById)
-window.onunload=savemenustate</script> 
-     </head>
-     <head>
-         <!-- Keep all menus within masterdiv-->
-<div id="masterdiv"><div onclick="SwitchMenu('sub1')"></div>
-<span id="sub1">
-- <a href="https://self-subdued-relief.000webhostapp.com/index.html">Home</a><br>
-- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/My%20Arcade%20selection.html">Arcade Selection</a><br>
-- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Movies%20and%20TV.html">Movies and TV</a><br>
-- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Proxies.html">Proxies</a><br>
-- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Bookmarks.html">Bookmarks</a><br>
-- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Contacts.html">Contacts</a><br>
-- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Updates.html">Updates</a><br>
-- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Random%20Tools.html">Random Tools</a><br>
-- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Donation.html">Donations</a><br>
-- <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Other%20Useful%20Links.html">Other Useful Links</a><br>
      </head>
        <head>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="https://self-subdued-relief.000webhostapp.com/index.html">Home</a>
+    <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/My%20Arcade%20selection.html">Arcade Selection</a>
+  <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Movies%20and%20TV.html">Movies and TV</a>
+  <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Proxies.html">Proxies</a>
+    <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Contributors.html">Contributor</a>
+  <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Contacts.html">Contacts</a>
+    <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Bookmarks.html">Bookmarks</a>
+  <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Updates.html">Updates</a>
+  <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Random%20Tools.html">Random Tools</a>
+  <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Donation.html">Donation</a>
+  <a href="https://self-subdued-relief.000webhostapp.com/Sub-Domains/Other%20Useful%20Links.html">Other Useful Links</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open Sidebar</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</head>
          <div id="Font"><p style="text-align: center;">Contributors</p></div>
        <a href="https://github.com/titaniumnetwork-dev" target="_blank" rel="external" hreflang="en" type="text/html"><div id="Font"><p style="text-align: center;">Titanium Network for inspiring me to do this and for their proxies</p></div></a>
      <Body>
